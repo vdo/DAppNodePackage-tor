@@ -1,0 +1,14 @@
+{
+  "name": "tor.dappnode.eth",
+  "version": "0.0.1",
+  "description": "Tor relay and reverse proxy",
+  "avatar": "",
+  "type": "service",
+  "dependencies": {},
+  "author": "vdo@dappnode.io",
+  "categories": ["Developer tools"],
+  "links": {
+    "homepage": "https://torproject.org"
+  },
+  "license": "Apache"
+}

@@ -1,0 +1,6 @@
+version: '3.4'
+services:
+  tor.dappnode.eth:
+    build: ./build
+    image: 'tor.dappnode.eth:0.0.1'
+    restart: always
