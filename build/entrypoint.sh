@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Needed defaults
 export SOCKS_PORT="${SOCKS_PORT:-9050}"
 export NICKNAME="${NICKNAME:-NotProvided}"
 export CONTACT_INFO="${CONTACT_INFO:-NotProvided}"
@@ -8,7 +9,6 @@ export BANDWIDTH_RATE="${BANDWIDTH_RATE:-1 MBits}"
 export BANDWIDTH_BURST="${BANDWIDTH_BURST:-2 MBits}"
 export MAX_MEM="${MAX_MEM:-512 MB}"
 
-mkdir -p /data
 chmod 700 /data
 
 # Generate key if not present
@@ -17,8 +17,8 @@ if [ ! -f /data/key ]; then
   grep 'BEGIN RSA' -A 99 /data/key >/data/private_key
 fi
 
+# Show Tor hidden service address
 address=$(grep Found /data/key | cut -d ':' -f 2)
-
 echo "##############################################"
 echo
 echo "Hidden service address: ${address}"

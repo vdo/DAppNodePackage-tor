@@ -1,6 +1,19 @@
 version: '3.4'
 services:
-  tor.dappnode.eth:
+  tor.public.dappnode.eth:
     build: ./build
-    image: 'tor.dappnode.eth:0.0.1'
+    image: 'tor.public.dappnode.eth:0.0.1'
     restart: always
+    ports:
+      - '9001:9001'
+    volumes:
+      - 'data:/data'
+    environment:
+      - SOCKS_PORT=9050
+      - NICKNAME=NotProvided
+      - CONTACT_INFO=NotProvided
+      - BANDWIDTH_RATE=1 MBits
+      - BANDWIDTH_BURST=2 MBits
+      - MAX_MEM=512 MB
+volumes:
+  data: {}

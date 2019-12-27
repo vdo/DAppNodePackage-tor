@@ -1,14 +1,17 @@
 {
-  "name": "tor.dappnode.eth",
+  "name": "tor.public.dappnode.eth",
   "version": "0.0.1",
-  "description": "Tor relay and reverse proxy",
+  "upstreamVersion": "0.4.1.7",
+  "description": "Tor relay and onion proxy to IPFS",
   "avatar": "",
   "type": "service",
   "dependencies": {},
-  "author": "vdo@dappnode.io",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": ["Abel Boldú <vdo@dappnode.io> (https://github.com/vdo)"],
   "categories": ["Developer tools"],
   "links": {
-    "homepage": "https://torproject.org"
+    "homepage": "https://torproject.org",
+    "SOCKs": "http://tor.public.dappnode:9050"
   },
   "license": "Apache"
 }
