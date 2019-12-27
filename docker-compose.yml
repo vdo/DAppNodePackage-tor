@@ -6,6 +6,7 @@ services:
     restart: always
     ports:
       - '9001:9001'
+      - '9030:9030'
     volumes:
       - 'data:/data'
     environment:

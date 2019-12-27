@@ -5,6 +5,7 @@ export SOCKS_PORT="${SOCKS_PORT:-9050}"
 export NICKNAME="${NICKNAME:-NotProvided}"
 export CONTACT_INFO="${CONTACT_INFO:-NotProvided}"
 export OR_PORT="${OR_PORT:-9001}"
+export DIR_PORT="${DIR_PORT:-9030}"
 export BANDWIDTH_RATE="${BANDWIDTH_RATE:-1 MBits}"
 export BANDWIDTH_BURST="${BANDWIDTH_BURST:-2 MBits}"
 export MAX_MEM="${MAX_MEM:-512 MB}"
@@ -36,6 +37,7 @@ ContactInfo $CONTACT_INFO\n\
 RelayBandwidthRate $BANDWIDTH_RATE\n\
 RelayBandwidthBurst $BANDWIDTH_BURST\n\
 MaxMemInQueues $MAX_MEM\n\
+DirPort $DIR_PORT\n\
 ExitRelay 0\n\
 ExitPolicy reject *:*\n\
 HiddenServiceDir /data/\n\
